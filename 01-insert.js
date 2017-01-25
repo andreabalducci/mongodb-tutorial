@@ -1,6 +1,6 @@
 // mongo mongodb://localhost/demo 01-insert.js
 
-db.users.insert({
+var result = db.users.insert({
     "name": "Andrea Balducci",
     "phone": "555-000-1234",
     "address": {
@@ -11,4 +11,6 @@ db.users.insert({
         "country": "IT"
     },
     "age": NumberInt(42)
-})
+});
+
+print('insert:', result)
